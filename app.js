@@ -1,77 +1,42 @@
-// alert('HHHhELLO')
-// alert(33)
-// 1 - переменные - camelCase
-// 1.1 - точки с запятой может испозоваться, может опускаться (кроме некоторых случаев)
-// 1.2 - допускаются символы _ и $ (и цмфры - не с начала имени)
-
-// var name = 'Oleg'
-const firstName = 'Oleg'
-const lastName = 'Ivanov' // string
-const isProgrammer = true //boolean
-
-let age = 53 //number
-
-// name = 'Oleeeg'
-// console.log(name)
-// lastName = 'Iva'
-console.log(lastName)
-// age = 'some string'
-console.log(age)
-
-// 2 - мутирование
-console.log('Имя человека: ' + firstName + ', а возраст - ' + age)
-console.log('Имя человека: ' + firstName + ', а возраст - ' + age.toString())
-console.log(age)
-// const lastName2 = prompt('Введите фамилию')
-// alert(firstName + lastName)
-// alert(firstName + lastName2)
-
-// 3 - операторы (минус и плюс, умножить и рвзделить с числами, инкремент и декремент, плюсравнои пр.)
-// 4 - типы данных
-console.log(typeof age)
-let x
-console.log(typeof x) // баг с типом null - даёт object
-console.log(-(2 ** 2)) //
-
-// 5 - приоритет операторов
-// mdn operator precedence - поиск в гугле (mozilla developer network)
-// услоаные операторы (if() {} else if() {} else {})
-// 6 - двойное и тройное равеннство, тетрарный оператор - как в пхп
-// 7 - булева логика
-// 8 - функции (параметры через запятую)
-// 9 - массивы
-const cars = ['мазда', 'ниссан', 'тойота'] // с нуля
-console.log(cars)
-const cars2 = new Array('мазда', 'ниссан', 'тойота', 'тазик') // с нуля
-console.log(cars2)
-console.log(cars2.length)
-cars[0] = 'porsche'
-cars[cars.length] = 'Mazda'
-console.log(cars)
-
-// 10 - Циклы
-for (let i=0; i<cars.length; i++) {
-    const car = cars[i]
-    console.log(car)
+// Number
+const num = 42
+const float = 42.78
+console.log(float)
+const pow = 10e3
+function validate(obj, lowval, hival){
+    if ((obj.value < lowval) || (obj.value > hival))
+        alert("Неверное значение!");
 }
-for (let car of cars) {
-    console.log(car)
-}
+console.log("string text line 1\n\
+string text line 2");
+//new Number, String, Array
+// console.log(Number.MAX_SAFE_INTEGER);
+// console.log(Math.pow(2,53)-1);
+// console.log(Number.MIN_SAFE_INTEGER);
+// console.log(Number.MAX_VALUE);
+// console.log(Number.MIN_VALUE);
+// console.log(Number.POSITIVE_INFINITY);
+// console.log(Number.NaN); // Not A Number
+// console.log(typeof Number.NaN);
+// const weird = 2 / undefined
+// console.log(isNaN(weird));
+// console.log(Number.isNaN(42));
+// console.log(Number.isFinite(Infinity));
+// const strInt = '40'
+// const strFloat = '40.45'
+// console.log(Number.parseInt(strInt) + 2);
+// console.log(Number(strInt) + 2);
+// console.log(+strInt + 2);
+// console.log(parseFloat(strFloat) + 2);
+// console.log(+strFloat + 2);
 
-// 11 - объекты
-const person = {
-    firstName: 'Oleg',
-    lastName: 'Ivanov',
-    year: 1967,
-    languages: ['En', 'Ru', 'Ua'],
-    hasWife: true,
-    greet: function () {
-        console.log('greet from person')
-    }
-}
-console.log(person.year)
-console.log(person['firstName'])
-person.greet()
-person.isProgrammer = true
-console.log(person)
+console.log(0.4 + 0.2);
+console.log((0.4 + 0.2).toFixed(2));
+console.log(parseFloat((0.4 + 0.2).toFixed(2)));
+
+// BigInt
+console.log(1234567891234567891234567899999);
+console.log(typeof 1234567891234567891234567899999);
+console.log(typeof 1234567891234567891234567899999n);
+console.log(typeof (123456799899999999999n - 8887678n));
 
