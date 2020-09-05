@@ -1,2 +1,2 @@
 # js_project
-jast for meeting
+just for meeting
